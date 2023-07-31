@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InchiglemaComplementario.MainPage">
+
+    <StackLayout>
+        <Label Text="Estudiante Login" FontSize="20" HorizontalTextAlignment="Center"/>
+        <Image Source="https://nordvpn.com/wp-content/uploads/android-vs-ios_1200x628-1.png"/>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="USUARIO:" FontSize="20" Grid.Row="0" Grid.Column="0"/>
+            <Label Text="CLAVE:" FontSize="20" Grid.Row="1" Grid.Column="0"/>
+            <Button x:Name="btnIniciar" Text="Iniciar Sesion" Clicked="btnIniciar_Clicked" Grid.Row="2" Grid.Column="0"/>
+            <Entry x:Name="txtUsuario" Placeholder="Ingrese Usuario" Grid.Row="0" Grid.Column="1"/>
+            <Entry x:Name="txtClave" Placeholder="Ingrese clave" Grid.Row="0" Grid.Column="1" IsPassword="True"/>
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>

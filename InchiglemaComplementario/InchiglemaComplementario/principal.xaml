@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InchiglemaComplementario.principal">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text=" ESTUDIANTES" FontSize="20" HorizontalTextAlignment="Center"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="codigo" FontSize="10" TextColor="Blue" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="nombre" FontSize="10" TextColor="Blue" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="apellido" FontSize="10" TextColor="Blue" Grid.Row="0" Grid.Column="2"/>
+                <Label Text="curso" FontSize="10" TextColor="Blue" Grid.Row="0" Grid.Column="3"/>
+                <Label Text="paralelo" FontSize="10" TextColor="Blue" Grid.Row="0" Grid.Column="4"/>
+                <Label Text="nota" FontSize="10" TextColor="Blue" Grid.Row="0" Grid.Column="5"/>
+            </Grid>
+
+            <ListView x:Name="listarEstudiantes" ItemSelected="listarEstudiantes_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label x:Name="lblCodigo" Text="{Binding codigo}" Grid.Row="0" Grid.Column="0" />
+                                    <Label x:Name="lblNombre" Text="{Binding nombre}" Grid.Row="0" Grid.Column="1" />
+                                    <Label x:Name="lblApellido" Text="{Binding apellido}" Grid.Row="0" Grid.Column="2" />
+                                    <Label x:Name="lblCurso" Text="{Binding curso}" Grid.Row="0" Grid.Column="3" />
+                                    <Label x:Name="lblParalelo" Text="{Binding paralelo}" Grid.Row="0" Grid.Column="4" />
+                                    <Label x:Name="lblNota" Text="{Binding nota}" Grid.Row="0" Grid.Column="5" />
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+            <Button Text="INSERTAR " Clicked="Button_Clicked"></Button>
+
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

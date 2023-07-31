@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InchiglemaComplementario.ActulizarEliminar">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="ACTUALIZAR - ELIMINAR ESTUDIANTE" FontSize="20" HorizontalTextAlignment="Center"/>
+
+            <Entry x:Name="txtCodigo" IsReadOnly="True"/>
+            <Entry x:Name="txtNombre"/>
+            <Entry x:Name="txtApellido"/>
+            <Entry x:Name="txtCurso"/>
+            <Entry x:Name="txtParalelo"/>
+            <Entry x:Name="txtNota"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Button Text="actulizar" Clicked="Button_Clicked" Grid.Row="0" Grid.Column="0"/>
+                <Button Text="eliminar" Clicked="Button_Clicked_1" Grid.Row="0" Grid.Column="1"/>
+            </Grid>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
